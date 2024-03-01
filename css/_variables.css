@@ -1,0 +1,15 @@
+:root{
+    --background: #080809;
+    --light-background: #282828;
+    --teal: #26968F;
+    --borders: #AAAAAA;
+
+    --font: "Poppins", sans-serif;
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+
+    
+}

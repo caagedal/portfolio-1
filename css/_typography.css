@@ -1,0 +1,10 @@
+h2{
+    font-size: 64px;
+    font-weight: var(--semibold);
+}
+
+h3{
+    font-size: 32px;
+    font-weight: var(--bold);
+}
+
