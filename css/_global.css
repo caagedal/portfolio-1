@@ -13,11 +13,6 @@ body{
     margin: 0 auto;
 }
 
-@media (max-width: 1700px){
-    .container{
-        width: 95%;
-    }
-}
 
 
 
