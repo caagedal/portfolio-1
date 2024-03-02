@@ -3,6 +3,10 @@
     padding: 10px;
     color: var(--teal);
     border: solid 2px var(--teal);
+    text-decoration: none;
+}
+
+.button a:hover{
     box-shadow: var(--button-shadow);
 }
 
