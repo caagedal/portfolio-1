@@ -11,14 +11,14 @@ body{
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
-    padding-left: 128px;
-    padding-right: 128px;
+}
 
-    @media(max-width: 1000px){
-        padding-left: 32px;
-        padding-right: 32px;
-    
+@media (max-width: 1700px){
+    .container{
+        width: 95%;
     }
 }
+
+
 
 

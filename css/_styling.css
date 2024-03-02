@@ -3,6 +3,11 @@
     padding: 10px;
     color: var(--teal);
     border: solid 2px var(--teal);
+    box-shadow: var(--button-shadow);
+}
+
+.button{
+    padding-bottom: 30px;
 }
 
 /* introduction section */
@@ -12,14 +17,31 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    padding: 30px 0;
+    padding: 50px 0;
+}
+
+@media (max-width: 800px){
+    .intro{
+        flex-direction: column-reverse;
+    }
+
 }
 
 .intro-text{
     border-bottom: 2px solid var(--borders);
     width: 80%;
     padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
+
+.intro-text p{
+    font-size: 32px;
+    width: 70%;
+}
+
+
 
 
 /* Introduction image */
@@ -38,7 +60,6 @@
     width: 100%;
     object-fit: cover;
     box-shadow: 0 0 100px -42px var(--teal);
-
 }
 
 .top{
@@ -84,18 +105,39 @@
  
 }
 
+.projects{
+    border-bottom: 2px solid var(--borders);
+    padding-bottom: 150px;
+}
+
 /* cards */
 
 .card{
     border: 2px solid var(--teal);
     padding: 20px;
-    box-shadow: 0 0 20px 0px var(--teal);
+    min-height: 850px;
 }
 
 .card-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
+
+@media (max-width: 1450px){
+
+    .card-container{
+        flex-direction: column;
+    }
+    .card{
+        min-height: auto;
+    }
+    .content-text{
+        min-height: none;
+    }
+}
+
+
 
 .card h3{
     text-align: center;
@@ -108,7 +150,11 @@
 
 .media-box img{
     width: 100%;
-    object-fit: cover;
+    object-fit:cover;
+    max-height: 300px;
+    object-position: top;
+    cursor: pointer;
+
 }
 
 .language{
@@ -117,6 +163,168 @@
 }
 
 .card-text{
-    font-size: 20px;
     font-weight: var(--medium);
 }
+
+.card-links a{
+    color: white;
+    text-decoration: none;
+}
+
+.card-links{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 0;
+}
+
+i{
+    padding-right: 10px;
+    color: var(--teal);
+}
+
+.language-info{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.language-info p{
+    padding: 7px;
+    border: solid 2px var(--teal);
+    color: var(--teal);
+}
+
+.content-text{
+    min-height: 180px;
+}
+
+.about{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--borders);
+    margin-bottom: 100px;
+    padding: 150px 0;
+}
+.about-content{
+    max-width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media(max-width: 800px){
+    .about{
+        padding: 100px 0;
+    }
+    .projects{
+        padding-bottom: 100px;
+    }
+    .about-content{
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+       
+    }
+    .about-text p{
+        font-size: 16px;
+    }
+    .skillset p{
+        font-size: 16px;
+    }
+    .skillset ul{
+        gap: 10px;        
+    }
+}
+
+
+
+.about-text{
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+.about-text h2{
+    margin: 0 auto;
+}
+
+.skillset{
+    justify-content: center;
+    display: flex;
+    border: solid 2px var(--teal);
+    justify-content: space-evenly;
+}
+
+
+
+/* .skillset ul{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    
+}
+
+.skillset ul li{
+    list-style: none;
+} */
+
+.contact p{
+    color: var(--teal);
+}
+
+.social-links{
+    font-size: 60px;
+}
+
+/* modal */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sits on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.6); /* Black with opacity */
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 600px; /* Maximum width */
+  }
+  
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Style adjustments for the close button if using <button> instead of <span> */
+  button.close {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  @media(max-width: 1100px){        
+        .about{
+            margin-bottom: 50px;
+            padding: 100px 0;
+        }
+  }
